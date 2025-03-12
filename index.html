@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>App Taller Vehicular</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#00F0FF">
+  <link rel="icon" href="icon-192.png">
+</head>
+<body>
+
+  <div class="container" id="loginPanel">
+    <img src="https://cdn-icons-png.flaticon.com/512/3050/3050525.png" class="logo" alt="logo">
+    <h2>Iniciar Sesión</h2>
+    <input type="email" id="email" placeholder="Correo electrónico">
+    <input type="password" id="password" placeholder="Contraseña">
+    <select id="rol">
+      <option value="cliente">Cliente</option>
+      <option value="tecnico">Técnico</option>
+    </select>
+    <button onclick="iniciarSesion()">Ingresar</button>
+  </div>
+
+  <div class="container panel hidden" id="clientePanel">
+    <h3>Panel del Cliente</h3>
+    <input type="text" id="marca" placeholder="Marca del vehículo">
+    <input type="text" id="modelo" placeholder="Modelo del vehículo">
+    <input type="file" id="fotoVehiculo">
+    <input type="date" id="proximaRevision">
+    <button onclick="registrarVehiculo()">Registrar Vehículo</button>
+    <h4>Mis Vehículos</h4>
+    <ul id="listaVehiculosCliente"></ul>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+
+  <div class="container panel hidden" id="tecnicoPanel">
+    <h3>Panel del Técnico</h3>
+    <div id="listaVehiculosTecnico"></div>
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(reg => console.log('✅ Service Worker registrado'))
+        .catch(err => console.log('❌ Error al registrar SW:', err));
+    }
+  </script>
+</body>
+</html>
