@@ -3,7 +3,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 
 // 🔴 REEMPLAZA ESTOS DATOS CON TUS CREDENCIALES DE SUPABASE
 const SUPABASE_URL = "https://zueiavidrwxsepilnksi.supabase.co";
-const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."; // 🔴 Reemplázalo con tu clave real
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."; // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1ZWlhdmlkcnd4c2VwaWxua3NpIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIxNDg3MjcsImV4cCI6MjA1NzcyNDcyN30.gZpgb_tJ6H6Vmh1CLJv3_m8LoQlkjh06r396YbWGNbA
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 function iniciarSesion() {
