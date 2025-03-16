@@ -1,3 +1,8 @@
+
+const supabaseUrl = "https://zueiavidrwxsepilnksi.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp1ZWlhdmlkcnd4c2VwaWxua3NpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0MjE0ODcyNywiZXhwIjoyMDU3NzI0NzI3fQ.WyBbFskpZTCNYE_S8rOAWvC77GnZPr4yi4WVSOSsrcA";
+const supabase = supabase.createClient(supabaseUrl, supabaseKey);
+
 function iniciarSesion() {
   const rol = document.getElementById('rol').value;
   document.getElementById('loginPanel').classList.add('hidden');
