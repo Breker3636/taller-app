@@ -1,3 +1,11 @@
+
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
+
+// 🔴 REEMPLAZA ESTOS DATOS CON TUS CREDENCIALES DE SUPABASE
+const SUPABASE_URL = "https://zueiavidrwxsepilnksi.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."; // 🔴 Reemplázalo con tu clave real
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 function iniciarSesion() {
   const rol = document.getElementById('rol').value;
   document.getElementById('loginPanel').classList.add('hidden');
